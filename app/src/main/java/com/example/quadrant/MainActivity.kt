@@ -84,18 +84,15 @@ private fun SingleQuadrant(title: String, content: String, bgColor: Color) {
         modifier = Modifier
             .background(color = bgColor)
             .padding(all = 16.dp)
-            .fillMaxWidth()
-            .fillMaxHeight()
-            .wrapContentHeight(Alignment.CenterVertically)
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+
     ) {
 
         Text(
             text = title,
             fontWeight = FontWeight.Bold,
-            modifier = Modifier
-                .padding(bottom = 16.dp)
-                .fillMaxWidth()
-                .wrapContentWidth(Alignment.CenterHorizontally),
             textAlign = TextAlign.Justify
         )
 
@@ -103,7 +100,6 @@ private fun SingleQuadrant(title: String, content: String, bgColor: Color) {
 
         Text(
             text = content,
-            modifier = Modifier.wrapContentWidth(Alignment.CenterHorizontally),
             textAlign = TextAlign.Justify
         )
 
